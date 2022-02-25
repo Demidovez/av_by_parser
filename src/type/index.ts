@@ -69,4 +69,6 @@ export interface Advt {
   xenon_headlights: boolean; // Ксеноновые фары
   fog_lights: boolean; // Противотуманные фары
   led_headlights: boolean; // Светодиодные фары
+  site: string; // Сайт
+  url: string; // Остальная часть ссылки
 }

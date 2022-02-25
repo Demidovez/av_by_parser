@@ -1,8 +1,4 @@
-import { Schema, Types } from "mongoose";
-const ObjectId = Schema.Types.ObjectId;
-
-interface Advt {
-  id: Types.ObjectId;
+export interface Advt {
   advt_id: number; // ID на сайте
   title: string; // Заголовок
   brand: string; // Марка
@@ -74,77 +70,3 @@ interface Advt {
   fog_lights: boolean; // Противотуманные фары
   led_headlights: boolean; // Светодиодные фары
 }
-
-export const AdvtSchema = new Schema<Advt>({
-  id: ObjectId,
-  advt_id: { type: Number, unique: true, required: true },
-  title: { type: String, required: true },
-  brand: { type: String, required: true },
-  model: { type: String, required: true },
-  generation: String,
-  description: String,
-  date_create: { type: Number, required: true },
-  date_modify: { type: Number, required: true },
-  state: String,
-  status: String,
-  status_parse: { type: String, required: true },
-  price_byn: Number,
-  price_usd: Number,
-  city: String,
-  year: Number,
-  gearbox: String,
-  volume: Number,
-  fuel: String,
-  kilometers: Number,
-  carcase: String,
-  drive: String,
-  color: String,
-  phones: [String],
-  owner: String,
-  vin_status: Boolean,
-  exchange: Boolean,
-  images: [String],
-  is_private: Boolean,
-  alloy_wheels: Boolean,
-  roof_rails: Boolean,
-  tow_bar: Boolean,
-  abs: Boolean,
-  esp: Boolean,
-  anti_slip: Boolean,
-  immobilizer: Boolean,
-  signaling: Boolean,
-  rain_sensor: Boolean,
-  behind_camera: Boolean,
-  parking_sensors: Boolean,
-  control_dead_zones: Boolean,
-  front_airbags: Boolean,
-  side_airbags: Boolean,
-  behind_airbags: Boolean,
-  interior_color: String,
-  interior_material: String,
-  panoramic_view: Boolean,
-  luke: Boolean,
-  version_7: Boolean,
-  auto_start: Boolean,
-  cruise_control: Boolean,
-  wheel_multimedia: Boolean,
-  power_seats: Boolean,
-  front_power_windows: Boolean,
-  behind_power_windows: Boolean,
-  seat_heating: Boolean,
-  heated_windshield: Boolean,
-  heated_mirrors: Boolean,
-  wheel_heating: Boolean,
-  Heater: Boolean,
-  climate_control: Boolean,
-  air_conditioner: Boolean,
-  aux: Boolean,
-  bluetooth: Boolean,
-  cd_mp3: Boolean,
-  usb: Boolean,
-  multimedia_screen: Boolean,
-  regular_navigation: Boolean,
-  xenon_headlights: Boolean,
-  fog_lights: Boolean,
-  led_headlights: Boolean,
-});
